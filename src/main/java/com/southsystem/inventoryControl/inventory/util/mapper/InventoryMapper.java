@@ -2,6 +2,7 @@ package com.southsystem.inventoryControl.inventory.util.mapper;
 
 import com.southsystem.inventoryControl.inventory.collection.Inventory;
 import com.southsystem.inventoryControl.inventory.dto.InventoryDTO;
+import com.southsystem.inventoryControl.inventory.dto.InventoryRequestDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -12,5 +13,5 @@ public interface InventoryMapper {
     InventoryDTO buildInventoryDTO(Inventory inventory);
 
     @Mapping(target = "id", ignore = true)
-    Inventory buildInventory(InventoryDTO inventoryDTO);
+    Inventory buildInventory(InventoryRequestDTO inventoryRequestDTO);
 }

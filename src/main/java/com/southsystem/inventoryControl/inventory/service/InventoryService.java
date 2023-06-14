@@ -1,6 +1,7 @@
 package com.southsystem.inventoryControl.inventory.service;
 
 import com.southsystem.inventoryControl.inventory.dto.InventoryDTO;
+import com.southsystem.inventoryControl.inventory.dto.InventoryRequestDTO;
 import com.southsystem.inventoryControl.inventory.repository.InventoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,9 @@ public class InventoryService {
             return inventoryMapper.buildInventoryDTO(repository.findById(id).get());
         }
         return null;
+    }
+
+    public InventoryDTO create(InventoryRequestDTO requestDTO) {
+        return inventoryMapper.buildInventoryDTO(repository.save(inventoryMapper.buildInventory(requestDTO)));
     }
 }
