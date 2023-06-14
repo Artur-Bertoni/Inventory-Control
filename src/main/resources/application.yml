@@ -4,27 +4,9 @@ spring:
       host: localhost
       port: 27017
       database: ze-da-manga
-      username: ${MONGO_INITDB_ROOT_USERNAME}
-      password: ${MONGO_INITDB_ROOT_PASSWORD}
+#      username: adm
+#      password: 123
 
 server:
   port: 8080
-  servlet.context-path: /api/inventory-control
-  compression.enabled: true
-  error.include-message: always
-  spring.url: ${SPRING-URL:localhost:8080}
-
-springdoc:
-  override-with-generic-response: true
-  api-docs.enabled: true
-  swagger-ui:
-    server.list: http://localhost:${server.port}${server.servlet.context-path}
-    path: /swagger-ui
-    enabled: true
-    operations-sorter: alpha
-    tags-sorter: alpha
-    filter: true
-    disable-swagger-default-url: true
-    csrf.enabled: false
-    doc-expansion: none
-  default-produces-media-type: application/json
+#  error.include-message: always

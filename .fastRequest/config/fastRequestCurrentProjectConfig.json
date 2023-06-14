@@ -4,7 +4,7 @@
 			"hostGroup":[
 				{
 					"env":"local",
-					"url":"http://localhost:8080/api/inventory-control"
+					"url":"http://localhost:8080"
 				}
 			],
 			"name":"inventoryControl"
